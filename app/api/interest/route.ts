@@ -1,5 +1,3 @@
-// pages/api/interests.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 

@@ -24,6 +24,7 @@ model Interest {
   id        Int      @id @default(autoincrement())
   userId    Int
   user      User     @relation(fields: [userId], references: [id])
-  interests String   // Field to store user's interests
+  interest  String   // Field to store user's interests
   createdAt DateTime @default(now())
 }
+

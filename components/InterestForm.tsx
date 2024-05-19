@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function InterestForm({ email }: { email: string }) {
-  const [interests, setInterests] = useState('');
-  const router = useRouter();
+  const [interest, setInterests] = useState('');
+ // const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInterests(e.target.value);
@@ -14,17 +14,17 @@ export default function InterestForm({ email }: { email: string }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch('/api/interests', {
+    const res = await fetch('/api/interest', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, interests }),
+      body: JSON.stringify({ email, interest }),
     });
 
     if (res.ok) {
       alert('Interests submitted successfully');
-      router.push('/dashboard'); // redirect to dashboard or desired page
+      //router.push('/dashboard'); // redirect to dashboard or desired page
     } else {
       const data = await res.json();
       alert(data.message);
@@ -40,7 +40,7 @@ export default function InterestForm({ email }: { email: string }) {
           name="interests"
           id="interests"
           onChange={handleChange}
-          value={interests}
+          value={interest}
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
       </div>

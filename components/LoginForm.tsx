@@ -1,8 +1,10 @@
 "use client"
 
+import { link } from 'fs/promises';
+import Link from 'next/link';
 import { useState } from 'react';
 
-export default function LoginForm() {
+export default function LoginForm({ onLogin }: { onLogin: (email: string) => void }) {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -27,8 +29,10 @@ export default function LoginForm() {
     const data = await res.json();
     if (res.ok) {
       alert('Login successful');
+      <Link href="/interest"></Link>
+      onLogin(data.email); // Pass the email to the callback
     } else {
-      alert(data.error);
+      alert(data.message);
     }
   };
 

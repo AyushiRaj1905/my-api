@@ -1,5 +1,7 @@
+"use client"
 import RegisterForm from '@/components/RegisterForm';
 import LoginForm from '@/components/LoginForm';
+import InterestForm from '@/components/InterestForm';
 
 export default function Register() {
   return (
@@ -13,7 +15,11 @@ export default function Register() {
         <h2>
           Login
         </h2>
-        <LoginForm/>
+        <LoginForm onLogin={()=>{}} />
+        <h2>
+          Interest form
+        </h2>
+        <InterestForm email={'rajaayushi1234@gmail.com'}/>
       </div>
     </div>
   );
