@@ -2,7 +2,7 @@
 import RegisterForm from '@/components/RegisterForm';
 import LoginForm from '@/components/LoginForm';
 import { useState } from 'react';
-import InterestForm from '@/components/IntrestForm';
+import InterestForm from '@/components/InterestForm';
 
 export default function Register() {
   const [loggedIn, setLoggedIn] = useState(false);
