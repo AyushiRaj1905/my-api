@@ -1,4 +1,5 @@
 import RegisterForm from '@/components/RegisterForm';
+import LoginForm from '@/components/LoginForm';
 
 export default function Register() {
   return (
@@ -9,6 +10,10 @@ export default function Register() {
           Register a new account
         </h2>
         <RegisterForm />
+        <h2>
+          Login
+        </h2>
+        <LoginForm/>
       </div>
     </div>
   );
