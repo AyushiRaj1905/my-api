@@ -17,7 +17,7 @@ export default function Register() {
         </h2>
         <LoginForm onLogin={()=>{}} />
         <h2>
-          Interest form
+          Interest form jinvdk
         </h2>
         <InterestForm email={'rajaayushi1234@gmail.com'}/>
       </div>
